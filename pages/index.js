@@ -18,7 +18,7 @@ export default function Home() {
         <div className={styles.description}>
           <h1>
             KAYA
-            <br>KENKO</br>
+            <br>KENgiO</br>
           </h1>
         
           <div>
