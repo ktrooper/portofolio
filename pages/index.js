@@ -18,58 +18,50 @@ export default function Home() {
         <div className={styles.description}>
           <h1>
             KAYA
-            KENKO
+            <br>KENKO</br>
           </h1>
         
           <div>
-        <Image src="public/IMG_0970.png"></Image>
+        <Image src="/IMG_0970.png"></Image>
           
           </div>
         </div>
 
         <div className={styles.center}>
         <a
-            href="https://www.awkmiu.com/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
+           
           >
             <h2 className={inter.className}>
               Works <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-             Awkmiu
+             ・Awkmiu
             </p>
           </a>
 
           <a
-            
-            target="_blank"
-            rel="noopener noreferrer"
+          
           >
             <h2 className={inter.className}>
               Skills<span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-            ・中学受験用塾講師歴5年
-            ・ベース歴7年
-            ・普通自動車免許
-            ・音響経験あり
+            <br>中学受験用塾講師歴5年</br>
+            <br>ベース歴7年</br>
+            <br>普通自動車免許</br>
+            <br>音響経験あり</br>
+            
+            
 
             </p>
           </a>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a>
             <h2 className={inter.className}>
               Background <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              ・慶應義塾大学卒業
+              慶應義塾大学卒業
             </p>
           </a>
 
