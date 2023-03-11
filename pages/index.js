@@ -18,47 +18,47 @@ export default function Home() {
         <div className={styles.description}>
           <h1>
             KAYA
-            <br>KENgiO</br>
+            <br/>KENKO
           </h1>
         
           <div>
-        <Image src="/IMG_0970.png"></Image>
+        <Image src="/IMG_0970.png" alt="me" width="220" height="218"></Image> 
           
           </div>
         </div>
 
         <div className={styles.center}>
-        <a
+        <a className={styles.card}
            
           >
             <h2 className={inter.className}>
-              Works <span>-&gt;</span>
+              Works 
             </h2>
             <p className={inter.className}>
-             ・Awkmiu
+             Awkmiu
             </p>
           </a>
 
-          <a
+          <a className={styles.card}
           
           >
             <h2 className={inter.className}>
-              Skills<span>-&gt;</span>
+              Skills
             </h2>
             <p className={inter.className}>
-            <br>中学受験用塾講師歴5年</br>
-            <br>ベース歴7年</br>
-            <br>普通自動車免許</br>
-            <br>音響経験あり</br>
+            <br/>中学受験用塾講師歴5年
+            <br/>ベース歴7年
+            <br/>普通自動車免許
+            <br/>音響経験あり
             
             
 
             </p>
           </a>
 
-          <a>
+          <a className={styles.card}>
             <h2 className={inter.className}>
-              Background <span>-&gt;</span>
+              Background
             </h2>
             <p className={inter.className}>
               慶應義塾大学卒業
@@ -72,7 +72,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              SNS <span>-&gt;</span>
+              SNS
             </h2>
             <p className={inter.className}>
               twitter
