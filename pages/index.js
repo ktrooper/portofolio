@@ -21,13 +21,13 @@ export default function Home() {
             <br/>KENKO
           </h1>
         
-          <div>
-        <Image src="/IMG_0970.png" alt="me" width="220" height="218"></Image> 
+          <div className={styles.image}>
+        <Image src="/IMG_0970.png" alt="me" width="300" height="300"></Image> 
           
           </div>
         </div>
 
-        <div className={styles.center}>
+        <div className={styles.centerright}>
         <a className={styles.card}
            
           >
@@ -39,23 +39,27 @@ export default function Home() {
             </p>
           </a>
 
-          <a className={styles.card}
           
-          >
+          
+          
+            <a className={styles.card2}>
             <h2 className={inter.className}>
               Skills
             </h2>
             <p className={inter.className}>
-            <br/>中学受験用塾講師歴5年
+            中学受験用塾講師歴5年
             <br/>ベース歴7年
             <br/>普通自動車免許
             <br/>音響経験あり
             
             
+        
 
             </p>
-          </a>
-
+            </a>
+          
+          </div>
+          <div className={styles.centerleft}>
           <a className={styles.card}>
             <h2 className={inter.className}>
               Background
