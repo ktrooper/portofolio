@@ -15,14 +15,14 @@ return (
 </Head>
 <main className={styles.main}>
 <div className={styles.image2}>
-<Image src="/ピック.png" alt="pick" width="1000" height="1000" />
+<Image src="/ピック.png" alt="pick" width="1050" height="1050" />
 <div className={styles.description}>
    <h1 className={styles.title}>KAYA KENKO</h1>
     <p className={styles.subtitle}>manifacted musicman</p>
               
            
      <div className={styles.image}>
-<Image src="/IMG_0970.png" alt="me" width="230" height="230" />
+<Image src="/102.png" alt="me" width="230" height="230" />
 <div className={styles.border}></div>
  </div>
       </div>
