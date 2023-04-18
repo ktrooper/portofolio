@@ -1,61 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-
 .main {
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 0px;
-min-height: 250vh;
-min-width: 10px; 
+  justify-content: center;
+  align-items: center;
+  background-color: #FEF9F9;
+  background-size: 100%;
+  min-width: none;
+  overflow-clip-margin: content-box;
+    overflow: clip;
 
-max-width: 100%;
-background-color: #FEF9F9;
-background-size: 100%;
-
+  
 }
 
 .description {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   text-align: center;
   border: 6px solid rgba(0, 0, 0, 0.734);
-  color:rgba(0, 0, 0, 0.778);
-  top:px;
+  color: rgba(0, 0, 0, 0.778);
+  top: 0;
   width: 520px;
   height: 120px;
-  
   font-size: 42px;
   filter: blur(0.4px);
-
-  margin: 0px;
-  text-shadow:  -10px -5px 10px rgba(0, 0, 0, 0.419);
+  align-content: center;
+  margin: 0;
+  text-shadow: -10px -5px 10px rgba(0, 0, 0, 0.419);
   box-shadow: -10px -6px 10px rgba(0, 0, 0, 0.338);
   outline: 2px solid rgba(239, 239, 239, 0.038);
   outline-offset: -2px;
   transform: translate(250px,-750px);
- 
 }
+
 .title {
   font-family: 'Raleway', sans-serif;
-  margin:0px;
+  margin: 0;
 }
 
 .subtitle {
   font-size: 20px;
   margin: -10px;
-  color:rgba(0, 0, 0, 0.816);
+  color: rgba(0, 0, 0, 0.816);
   text-shadow:  -10px -5px 10px rgba(0, 0, 0, 0.419);
   
 }
 
+
+
 .image {
   position: absolute;
-  top:180px;
-  left:140px;
+  
   width: 250px;
   height: 250px;
     width: 200px;
@@ -73,9 +69,9 @@ background-size: 100%;
 
 
 .image2 {
-  position:absolute;
-  transform: translate(20px,-820px);
- 
+
+  max-width: 1050;
+  max-height: 1050;
 }
 .center{
   transform: translate(0px,600px);

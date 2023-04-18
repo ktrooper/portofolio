@@ -15,7 +15,7 @@ return (
 </Head>
 <main className={styles.main}>
 <div className={styles.image2}>
-<Image src="/ピック.png" alt="pick" width="1050" height="1050" />
+<Image src="/ピック.png" alt="pick" width="1050" height="1050"  />
 <div className={styles.description}>
    <h1 className={styles.title}>KAYA KENKO</h1>
     <p className={styles.subtitle}>manifacted musicman</p>
