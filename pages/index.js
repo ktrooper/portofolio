@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import styles from '/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +19,8 @@ export default function Home() {
 
         <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
 
+
+ 
         <div className="center">
           <a className="card">
             <h2 className={inter.className}>Works</h2>
@@ -53,6 +55,16 @@ export default function Home() {
             <p className={inter.className}>twitter</p>
           </a>
         </div>
+
+        <aside className={styles.sideMenu}>
+          <h2 className={styles.sideMenuTitle}></h2>
+          <ul className={styles.sideMenuList}>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#In the future...">In the future...</a></li>
+          </ul>
+        </aside>
       </main>
     </>
   )

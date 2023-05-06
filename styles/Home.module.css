@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
 
 
 .main {
- 
   background-color: #FEF9F9;
-  
+ height:100%;
+
   text-align: center;
 
 
@@ -30,19 +31,73 @@
   width: 300px;
 }
 
-.card:hover {
-  background-color: #f5f5f5;
+
+
+.sideMenu ul{
+
+  
+ 
+  
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 20%;
+  height:100%;
+  padding: 0px;
+  background-color: #FEF9F9;
+  
+  
 }
 
 
 
 
+.sideMenuList
+{  font-family: 'Spectral', serif;
+  font-size: 200%;
+  margin-top: 5%;
+  
+
+}
+.sideMenuList a
+{ 
+ color: black;
+ text-decoration: none;
+
+}
 
 
+.sideMenuList li
+{ 
+  text-align: right;
+ margin-top: 10%;
+padding-right:5%;
 
+
+}
 .imagen {
   
   width: 50%;
   height: auto;
   
+}
+@media screen and (max-width: 599px) {
+
+  .sideMenuList{
+    font-size: 100%;
+    margin-top:40%;
+  }
+  .imagen {
+    width:80%;
+    margin-top:40%;
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+
+  .sideMenuList{
+    font-size: 300%;
+  }
 }
