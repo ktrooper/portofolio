@@ -22,44 +22,38 @@ export default function Home() {
 
  
         <div className="center">
-          <a className="card">
-            <h2 className={inter.className}>Works</h2>
-            <p className={inter.className}>Awkmiu</p>
-          </a>
+          
 
           <a className="card">
-            <h2 className={inter.className}>Skills</h2>
+            <h2 className={inter.className}id="skills">Skills</h2>
             <p className={inter.className}>
-              中学受験用塾講師歴5年
-              <br />
-              ベース歴7年
-              <br />
-              普通自動車免許
-              <br />
-              音響経験あり
+              #HTML<br/>
+              #CSS<br/>
+              #Javascript<br/>
+              #React<br/>
+              #TOEIC 725/990点<br/>
+              DeepL等の翻訳ソフトを使いながらではありますが、
+              公式ドキュメントを参考に調べながら開発を行うことができます。
             </p>
           </a>
 
           <a className="card">
-            <h2 className={inter.className}>Background</h2>
-            <p className={inter.className}>慶應義塾大学卒業</p>
+            <h2 className={inter.className}id="Background">Background</h2>
+            <p className={inter.className}>2023年3月まで、株式会社DONUTSのミクチャ制作部にて音響を担当しておりました。
+            また同年に慶應義塾大学商学部を卒業しています。</p>
           </a>
 
-          <a
-            href="https://twitter.com/kaya_awkmiu"
-            className="card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>SNS</h2>
-            <p className={inter.className}>twitter</p>
-          </a>
+        
+            <h2 className={inter.className}id="In the future...">In the future...</h2>
+            <p className={inter.className}>現在、音楽活動と並行してできる仕事を探しています。<br/>
+            仕事としてコードを書いたことはありませんが、今持つスキルを活かしてお仕事させていただければ嬉しいです。</p>
+          
         </div>
 
         <aside className={styles.sideMenu}>
           <h2 className={styles.sideMenuTitle}></h2>
           <ul className={styles.sideMenuList}>
-            <li><a href="#works">Works</a></li>
+            
             <li><a href="#skills">Skills</a></li>
             <li><a href="#background">Background</a></li>
             <li><a href="#In the future...">In the future...</a></li>
