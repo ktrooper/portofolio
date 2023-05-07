@@ -24,7 +24,7 @@ export default function Home() {
         <div className={styles.center}>
           
 
-          <a className={styles.card}>
+          <a className={styles.card1}>
             <h2 className={inter.className}id="skills">Skills</h2>
             <p className={inter.className}>
               #HTML<br/>
@@ -33,21 +33,24 @@ export default function Home() {
               #React<br/>
               #TOEIC 725/990点<br/>
               <br/>
-              DeepL等の翻訳ソフトを使いながらではありますが、
+              DeepL等の翻訳ソフトを使いながらではありますが、<br/>
               公式ドキュメントを参考に調べながら開発を行うことができます。
             </p>
           </a>
 
-          <a className={styles.card}>
+          <a className={styles.card2}>
             <h2 className={inter.className}id="background">Background</h2>
             <p className={inter.className}>2023年3月まで、株式会社DONUTSのミクチャ制作部にて音響を担当しておりました。
             また同年に慶應義塾大学商学部を卒業しています。</p>
           </a>
 
         
-          <a className={styles.card}>
+          <a className={styles.card3}>
             <h2 className={inter.className}id="Contact">Contact</h2>
-            <p className={inter.className}>現在、音楽活動と並行してできる仕事を探しています。<br/>
+            <p className={inter.className}>
+              Gmail→Stom4120@gmail.com<br/>
+              
+              現在、音楽活動と並行してできる仕事を探しています。<br/>
             仕事としてコードを書いたことはありませんが、今持つスキルを活かしてお仕事させていただければ嬉しいです。</p>
          </a> 
         </div>
