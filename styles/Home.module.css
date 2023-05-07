@@ -7,7 +7,7 @@
  height:100%;
  font-family: 'Spectral', serif;
   text-align: center;
-
+  scroll-behavior: smooth;
 
 
   overflow-clip-margin: content-box;
@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: space-evenly;
  
-  height:200vh;
+  height:300vh;
   width: 100%;
 }
  
@@ -148,6 +148,7 @@ padding-right:5%;
   top: 10%;
   width: 50%;
   height: auto;
+  max-width: 900px;
   
 }
 @media screen and (max-width: 599px) {
@@ -160,7 +161,11 @@ padding-right:5%;
     width:80%;
     
     overflow: visible;
-    max-width: 750px;
+    
+  }
+  .center{
+    height:150vh;
+    justify-content: space-around;
   }
   .center h2{
  

@@ -1,12 +1,29 @@
+import React, { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 import styles from '/styles/Home.module.css'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
+
+
 export default function Home() {
-  
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  // *asideのリンクがクリックされたときに実行される関数
+  const handleClick = (id) => {
+    const element = document.getElementById(id);
+    const position = element.offsetTop - 100;
+    setScrollPosition(position);
+    window.scrollTo({
+      top: position,
+      behavior: 'smooth'
+    });
+  };
+
 
   return (
     <>
@@ -17,7 +34,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 <div className={styles.mainvisual}>
-        <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
+<Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
 </div>
 
  
@@ -75,9 +92,10 @@ export default function Home() {
           <h2 className={styles.sideMenuTitle}></h2>
           <ul className={styles.sideMenuList}>
             
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#background">Background</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            
+            <li><a onClick={() => handleClick("skills")}>Skills</a></li>
+    <li><a onClick={() => handleClick("background")}>Background</a></li>
+    <li><a onClick={() => handleClick("Contact")}>Contact</a></li>
           </ul>
         </aside>
       </main>
