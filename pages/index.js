@@ -40,18 +40,34 @@ export default function Home() {
 
           <a className={styles.card2}>
             <h2 className={inter.className}id="background">Background</h2>
-            <p className={inter.className}>2023年3月まで、株式会社DONUTSのミクチャ制作部にて音響を担当しておりました。
-            また同年に慶應義塾大学商学部を卒業しています。</p>
+            <p className={inter.className}>
+              ・学歴<br/><br/>
+              2018年3月：慶應義塾大学志木高校卒業<br/>
+              2023年3月：慶應義塾大学商学部卒業<br/><br/>
+              ・職歴<br/><br/>
+              2018年12月~現在：株式会社日本入試センター<br/>
+              SAPIXPrivatoにて非常勤務講師を担当。<br/>
+              2022年3月~2023年3月：株式会社DONUTS<br/>
+             ミクチャ事業部にて音響業務を担当。<br/><br/>
+             ・音楽経歴<br/><br/>
+             2018年12月~現在：Awkmiuというバンドにてベースを担当。<br/>
+             2021年12月~2022年12月：池袋Somethin' Jazz Clubにて、
+             月1セッションリーダーを行う。<br/>
+        
+
+             </p>
           </a>
 
         
           <a className={styles.card3}>
             <h2 className={inter.className}id="Contact">Contact</h2>
+            <h3 className={inter.className}>stom4120@gmail.com</h3>
             <p className={inter.className}>
-              Gmail→Stom4120@gmail.com<br/>
-              
+              <br/>
+
               現在、音楽活動と並行してできる仕事を探しています。<br/>
-            仕事としてコードを書いたことはありませんが、今持つスキルを活かしてお仕事させていただければ嬉しいです。</p>
+            仕事としてコードを書いたことはありませんが、
+            今持つスキルを活かしてお仕事させていただければ嬉しいです。</p>
          </a> 
         </div>
 

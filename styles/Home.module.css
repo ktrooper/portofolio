@@ -24,12 +24,13 @@
 
 }
 .center {
+  background-color: #faf1f1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+ 
   height:200vh;
-  width: 85%;
+  width: 100%;
 }
  
   
@@ -40,20 +41,47 @@
   font-family: 'Spectral', serif;
 
   font-size: 4vw;
-  text-align: left;
-  padding-left:2vw;
+  
+  padding-left:7vw;
   padding-top: 1.5vw;
   
 
 }
+
 .center p{
   font-family:  'Spectral', serif;
   padding-top: 5vw;
-  padding-left:3vw;
+  padding-left:10vw;
+  padding-right: 5vw;
   font-weight: lighter;
   font-size: 2vw;
+  
+}
+.card1{
+  text-align: left;
+
+}
+.card3{
+  text-align: left;
+
+}
+.card3 h3{
+  
+ 
+    font-family: 'Spectral', serif;
+  
+    font-size: 4vw;
+    padding-top: 1%;
+    margin:5%;
+    text-align: center;
+    
+  
+  
+}
+.card2{
   text-align: left;
 }
+
 .sideMenu
 {
   background-color: transparent;
@@ -81,18 +109,18 @@
 
 .sideMenuList a
 { 
- color: rgb(21, 21, 21);
+ color: rgba(0, 0, 0, 0.93);
  text-decoration: none;
 
 }
 
 .sideMenuList a:hover {
-  color: #8b8888;
-  transition: color 2s ease;
+  color: #2c2b2ba1;
+  transition: color 1s ease;
 
   opacity: 0;
   
-  animation: slide-in-left 2s forwards;
+  animation: slide-in-left 1s forwards;
   
 }
 @keyframes slide-in-left {
@@ -132,7 +160,23 @@ padding-right:5%;
     width:80%;
     
     overflow: visible;
+    max-width: 750px;
   }
+  .center h2{
+ 
+    
+  
+    font-size: 5vw;
+    
+    
+    
+  
+  }
+  .center p{
+    
+    font-size: 3vw;
+    
+}
 }
 
 @media screen and (min-width: 600px) {
