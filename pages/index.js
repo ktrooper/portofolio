@@ -16,15 +16,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
-
+<div className={styles.mainvisual}>
         <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
-
+</div>
 
  
-        <div className="center">
+        <div className={styles.center}>
           
 
-          <a className="card">
+          <a className={styles.card}>
             <h2 className={inter.className}id="skills">Skills</h2>
             <p className={inter.className}>
               #HTML<br/>
@@ -32,22 +32,24 @@ export default function Home() {
               #Javascript<br/>
               #React<br/>
               #TOEIC 725/990点<br/>
+              <br/>
               DeepL等の翻訳ソフトを使いながらではありますが、
               公式ドキュメントを参考に調べながら開発を行うことができます。
             </p>
           </a>
 
-          <a className="card">
-            <h2 className={inter.className}id="Background">Background</h2>
+          <a className={styles.card}>
+            <h2 className={inter.className}id="background">Background</h2>
             <p className={inter.className}>2023年3月まで、株式会社DONUTSのミクチャ制作部にて音響を担当しておりました。
             また同年に慶應義塾大学商学部を卒業しています。</p>
           </a>
 
         
-            <h2 className={inter.className}id="In the future...">In the future...</h2>
+          <a className={styles.card}>
+            <h2 className={inter.className}id="Contact">Contact</h2>
             <p className={inter.className}>現在、音楽活動と並行してできる仕事を探しています。<br/>
             仕事としてコードを書いたことはありませんが、今持つスキルを活かしてお仕事させていただければ嬉しいです。</p>
-          
+         </a> 
         </div>
 
         <aside className={styles.sideMenu}>
@@ -56,7 +58,7 @@ export default function Home() {
             
             <li><a href="#skills">Skills</a></li>
             <li><a href="#background">Background</a></li>
-            <li><a href="#In the future...">In the future...</a></li>
+            <li><a href="#Contact">Contact</a></li>
           </ul>
         </aside>
       </main>

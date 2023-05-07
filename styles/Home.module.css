@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
 
 
@@ -16,21 +16,42 @@
 
   
 }
-.center {
+.mainvisual{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+.center {
+  
+  height:200vh;
 }
 
 .card {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  text-align: center;
+  
   width: 300px;
+  
 }
+.card h2{
+ 
+  font-family: 'Spectral', serif;
+  font-weight: bolder;
+  font-size: 4vw;
+  text-align: left;
+  padding-left:2vw;
+  padding-top: 1.5vw;
+  
 
+}
+.card p{
+  font-family:  'Spectral', serif;
+  padding-top: 5vw;
+  padding-left:3vw;
+  font-weight: lighter;
+  font-size: 2vw;
+  text-align: left;
+}
 .sideMenu
 {
   background-color: transparent;
@@ -58,7 +79,7 @@
 
 .sideMenuList a
 { 
- color: black;
+ color: rgb(21, 21, 21);
  text-decoration: none;
 
 }
@@ -94,7 +115,7 @@ padding-right:5%;
 
 }
 .imagen {
-  
+  top: 10%;
   width: 50%;
   height: auto;
   
@@ -102,12 +123,12 @@ padding-right:5%;
 @media screen and (max-width: 599px) {
 
   .sideMenuList{
-    font-size: 100%;
-    margin-top:50%;
+    font-size: 5vw;
+    margin-top:10%;
   }
   .imagen {
     width:80%;
-    margin-top:40%;
+    
     overflow: visible;
   }
 }
