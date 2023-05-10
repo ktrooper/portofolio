@@ -100,8 +100,8 @@ export default function Home() {
           </ul>
         </aside>
       </main>
-      <footer>
-        kpkpkppkpk
+      <footer className={styles.footer}>
+        Twitter→@Kayakenko309
       </footer>
     </>
   )
