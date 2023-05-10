@@ -1,11 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
-
+@import url('https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700');
 
 .main {
   background-color: #FEF9F9;
  height:100%;
- font-family: 'Spectral', serif;
+ font-family: 'Montserrat', sans-serif;
   text-align: center;
   scroll-behavior: smooth;
 
@@ -24,16 +25,16 @@
 
 }
 .center {
-  background-color: #faf1f1;
+  
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
  
-  height:300vh;
-  width: 100%;
-}
  
   
+  width: 100%;
+  margin-bottom: 5%; /* footerの高さ */
+}
+ 
   
   
 .center h2{
@@ -55,14 +56,27 @@
   padding-right: 5vw;
   font-weight: lighter;
   font-size: 2vw;
-  
+  align-items: center;
 }
 .card1{
+  padding-top: 7vw;
   text-align: left;
+  height:100vh;
+  background-color: rgb(222, 207, 207);
+
 
 }
-.card3{
+.card2{
+  padding-top: 7vw;
   text-align: left;
+  height:100vh ;
+  background-color: rgb(206, 224, 240);
+}
+.card3{
+  padding-top: 7vw;
+  text-align: left;
+  height:100vh ;
+  background-color: ;
 
 }
 .card3 h3{
@@ -78,9 +92,7 @@
   
   
 }
-.card2{
-  text-align: left;
-}
+
 
 .sideMenu
 {
@@ -148,7 +160,7 @@ padding-right:5%;
   top: 10%;
   width: 50%;
   height: auto;
-  max-width: 900px;
+  max-width: 700px;
   
 }
 @media screen and (max-width: 599px) {
@@ -164,7 +176,7 @@ padding-right:5%;
     
   }
   .center{
-    height:150vh;
+    
     justify-content: space-around;
   }
   .center h2{
@@ -190,4 +202,15 @@ padding-right:5%;
   .sideMenuList{
     font-size: 300%;
   }
+}
+.footer{
+  position:fixed;
+  font-size: larger;
+  display: flex;
+}
+.englishText {
+  font-family: 'Montserrat', sans-serif;
+}
+.japaneseText {
+  font-family: 'Noto Sans JP', sans-serif;
 }

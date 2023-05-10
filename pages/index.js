@@ -16,7 +16,7 @@ export default function Home() {
   // *asideのリンクがクリックされたときに実行される関数
   const handleClick = (id) => {
     const element = document.getElementById(id);
-    const position = element.offsetTop - 100;
+    const position = element.offsetTop - 5;
     setScrollPosition(position);
     window.scrollTo({
       top: position,
@@ -33,42 +33,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
-<div className={styles.mainvisual}>
+<div className={styles.mainvisual}id='IMG'>
 <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
 </div>
 
  
         <div className={styles.center}>
           
-
+          
           <a className={styles.card1}>
-            <h2 className={inter.className}id="skills">Skills</h2>
+            <h2 className={inter.className}id="skills"><span className={styles.englishText}>Skills</span></h2>
             <p className={inter.className}>
-              #HTML<br/>
+            <span className={styles.englishText}> #HTML<br/>
               #CSS<br/>
               #Javascript<br/>
               #React<br/>
-              #TOEIC 725/990点<br/>
+              #TOEIC</span> 725/990点<br/>
               <br/>
-              DeepL等の翻訳ソフトを使いながらではありますが、<br/>
+              <span className={styles.englishText}>DeepL</span>等の翻訳ソフトを使いながらではありますが、<br/>
               公式ドキュメントを参考に調べながら開発を行うことができます。
             </p>
           </a>
 
           <a className={styles.card2}>
-            <h2 className={inter.className}id="background">Background</h2>
+            <h2 className={inter.className}id="background"><span className={styles.englishText}>Background</span></h2>
             <p className={inter.className}>
               ・学歴<br/><br/>
               2018年3月：慶應義塾大学志木高校卒業<br/>
               2023年3月：慶應義塾大学商学部卒業<br/><br/>
               ・職歴<br/><br/>
               2018年12月~現在：株式会社日本入試センター<br/>
-              SAPIXPrivatoにて非常勤務講師を担当。<br/>
-              2022年3月~2023年3月：株式会社DONUTS<br/>
+              <span className={styles.englishText}>SAPIXPrivato</span>にて非常勤務講師を担当。<br/>
+              2022年3月~2023年3月：株式会社 <span className={styles.englishText}>DONUTS</span><br/>
              ミクチャ事業部にて音響業務を担当。<br/><br/>
              ・音楽経歴<br/><br/>
-             2018年12月~現在：Awkmiuというバンドにてベースを担当。<br/>
-             2021年12月~2022年12月：池袋Somethin' Jazz Clubにて、
+             2018年12月~現在： <span className={styles.englishText}>Awkmiu</span>というバンドにてベースを担当。<br/>
+             2021年12月~2022年12月：池袋 <span className={styles.englishText}>Somethin' Jazz Club</span>にて、
              月1セッションリーダーを行う。<br/>
         
 
@@ -77,8 +77,8 @@ export default function Home() {
 
         
           <a className={styles.card3}>
-            <h2 className={inter.className}id="Contact">Contact</h2>
-            <h3 className={inter.className}>stom4120@gmail.com</h3>
+            <h2 className={inter.className}id="Contact"> <span className={styles.englishText}>Contact</span></h2>
+            <h3 className={inter.className}> <span className={styles.englishText}>stom4120@gmail.com</span></h3>
             <p className={inter.className}>
               <br/>
 
@@ -96,9 +96,13 @@ export default function Home() {
             <li><a onClick={() => handleClick("skills")}>Skills</a></li>
     <li><a onClick={() => handleClick("background")}>Background</a></li>
     <li><a onClick={() => handleClick("Contact")}>Contact</a></li>
+    <li><a onClick={() => handleClick("IMG")}>Go back</a></li>
           </ul>
         </aside>
       </main>
+      <footer>
+        kpkpkppkpk
+      </footer>
     </>
   )
 }
