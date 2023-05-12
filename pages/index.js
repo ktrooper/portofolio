@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Inter } from 'next/font/google'
 import styles from '/styles/Home.module.css'
@@ -76,18 +77,7 @@ export default function Home() {
           </a>
 
         
-          <a className={styles.card3}>
-            <h2 className={inter.className}id="Contact"> <span className={styles.englishText}>Contact</span></h2>
-            <h3 className={inter.className}> <span className={styles.englishText}>stom4120@gmail.com</span></h3>
-            <p className={inter.className}>
-              <br/>
-
-              現在、音楽活動と並行してできる仕事を探しています。<br/>
-            仕事としてコードを書いたことはありませんが、
-            今持つスキルを活かしてお仕事させていただければ嬉しいです。</p>
-         </a> 
         </div>
-
         <aside className={styles.sideMenu}>
           <h2 className={styles.sideMenuTitle}></h2>
           <ul className={styles.sideMenuList}>
@@ -95,14 +85,17 @@ export default function Home() {
             
             <li><a onClick={() => handleClick("skills")}>Skills</a></li>
     <li><a onClick={() => handleClick("background")}>Background</a></li>
-    <li><a onClick={() => handleClick("Contact")}>Contact</a></li>
     <li><a onClick={() => handleClick("IMG")}>Go back</a></li>
           </ul>
         </aside>
-      </main>
-      <footer className={styles.footer}>
-        Twitter→@Kayakenko309
+        <footer className={styles.footer}>
+        <div className={styles.footerd}>Contact DM</div>
+    <div><Link href="https://twitter.com/kaya_awkmiu"><Image className={styles.footern}src= '/logo3.png' alt="pick" loading="lazy" position="relative" width="100" height="100"
+        ></Image></Link></div>
+        
       </footer>
+      </main>
+      
     </>
   )
 }
