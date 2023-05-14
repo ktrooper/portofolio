@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,13 +17,14 @@ export default function Home() {
   // *asideのリンクがクリックされたときに実行される関数
   const handleClick = (id) => {
     const element = document.getElementById(id);
-    const position = element.offsetTop - 5;
+    const position = element.offsetTop - 70;
     setScrollPosition(position);
     window.scrollTo({
       top: position,
       behavior: 'smooth'
     });
   };
+
 
 
   return (
@@ -67,10 +68,10 @@ export default function Home() {
               <span className={styles.englishText}>SAPIXPrivato</span>にて非常勤務講師を担当。<br/>
               2022年3月~2023年3月：株式会社 <span className={styles.englishText}>DONUTS</span><br/>
              ミクチャ事業部にて音響業務を担当。<br/><br/>
-             ・音楽経歴<br/><br/>
-             2018年12月~現在： <span className={styles.englishText}>Awkmiu</span>というバンドにてベースを担当。<br/>
-             2021年12月~2022年12月：池袋 <span className={styles.englishText}>Somethin' Jazz Club</span>にて、
-             月1セッションリーダーを行う。<br/>
+             <a className={styles.red}>現在求職中</a>
+             <br/><br/>
+            
+            
         
 
              </p>
@@ -99,3 +100,7 @@ export default function Home() {
     </>
   )
 }
+ /*・音楽経歴<br/><br/>
+             2018年12月~現在： <span className={styles.englishText}>Awkmiu</span>というバンドにてベースを担当。<br/>
+             2021年12月~2022年12月：池袋 <span className={styles.englishText}>Somethin' Jazz Club</span>にて、
+             月1セッションリーダーを行う。<br/> */
