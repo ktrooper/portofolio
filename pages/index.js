@@ -116,9 +116,9 @@ export default function Home() {
           <ul className={styles.sideMenuList}>
 
 
-            <li><a onClick={() => handleClick("skills")}>Skills</a></li>
-            <li><a onClick={() => handleClick("background")}>Background</a></li>
-            <li><a onClick={() => handleClick("IMG")}>Go back</a></li>
+            <li className={styles.sideMenuItem}><a onClick={() => handleClick("skills")}>Skills</a></li>
+            <li className={styles.sideMenuItem}><a onClick={() => handleClick("background")}>Background</a></li>
+            <li className={styles.sideMenuItem}><a onClick={() => handleClick("IMG")}>Go back</a></li>
           </ul>
         </aside>
         <footer className={styles.footer}>

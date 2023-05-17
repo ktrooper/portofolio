@@ -133,34 +133,43 @@
   position: fixed;
   top: 0px;
   right: 0;
-  width: 50%;
+  width: 30%;
   height:100%;
   padding: 0px;
- 
-  
-  
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
 }
-
-
-
-
 
 .sideMenuList a
 { 
  color: rgba(0, 0, 0, 0.93);
- text-decoration: none;
-
 }
 
-.sideMenuList a:hover{
-  color: #2c2b2ba1;
-  transition: color 1s ease;
+.sideMenuItem{
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
 
+.sideMenuItem:after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: black;
   opacity: 0;
-  
-  animation: slide-in-left 1s forwards;
-  
+  transition: opacity 300ms;
 }
+
+.sideMenuItem:hover::after,
+.sideMenuItem:focus::after{
+  opacity: 1;
+}
+
 @keyframes slide-in-left {
   from {
     opacity: 0;
