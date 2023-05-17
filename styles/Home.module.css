@@ -180,3 +180,12 @@ padding-right:5%;
 .workHistoryTitle {
   margin-top: 20px;
 }
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fadeInVisible{
+  opacity: 1;
+}

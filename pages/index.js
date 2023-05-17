@@ -1,68 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Inter } from 'next/font/google'
 import styles from '/styles/Home.module.css'
-
-
-const inter = Inter({ subsets: ['latin'] })
-
-
 
 export default function Home() {
 
-  const [visibleCards, setVisibleCards] = useState([]);
+
+  const elementsRef = useRef([]);
 
   useEffect(() => {
-    console.log("=== useeffect ===");
+
     const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const cards = document.querySelectorAll('.card1');
-
-      cards.forEach((card) => {
-        const cardTop = card.getBoundingClientRect().top;
-        console.log('windowHeight:', windowHeight);
-        console.log('cardTop:', cardTop);
-
-        if (cardTop < windowHeight) {
-          console.log('cli');
-          setVisibleCards((prevVisibleCards) => [...prevVisibleCards, card]);
-          card.classList.add('card1');
+      elementsRef.current.forEach((element) => {
+        if(element) {
+          const {top} = element.getBoundingClientRect();
+          const isVisible = top < window.innerHeight - 50;
+          if(isVisible) {
+            element.classList.add(styles.fadeInVisible);
+          }
         }
-      });
-    };
+      })
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
+  }, []);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
-
-  useEffect(() => {
-    visibleCards.forEach((card) => {
-      card.classList.add('fadeIn');
-    });
-  }, [visibleCards]);
-
-
-
-
-  const [scrollPosition, setScrollPosition] = useState(0);
   function handleClick(id) {
-    console.log('cli');
     const element = document.getElementById(id);
     const position = element.offsetTop - 70;
-    setScrollPosition(position);
     window.scrollTo({
       top: position,
       behavior: 'smooth'
     });
   }
-
-
-
+  
   return (
     <>
       <Head>
@@ -78,18 +49,17 @@ export default function Home() {
 
         <div className={styles.center}>
           <a className={styles.card1}>
-            <h2 id="skills" className={styles.cardTitle}>Skills</h2>
-            <div className={`${styles.cards} ${styles.fadeIn}`}>
+            <h2 ref={(ref) => elementsRef.current[0] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="skills">Skills</h2>
+            <div ref={(ref) => elementsRef.current[1] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
               <p> HTML / CSS / Javascript / React</p>
               <p>TOEIC 725/990点</p>
               <p style={{marginTop: "10px"}}>DeepL等の翻訳ソフトを使いながらではありますが、</p>
               <p>公式ドキュメントを参考に調べながら開発を行うことができます。</p>
             </div>
           </a>
-
           <a className={styles.card2}>
-            <h2 className={styles.cardTitle} id="background">Background</h2>
-            <div className={styles.cards}>
+            <h2 ref={(ref) => elementsRef.current[2] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="background">Background</h2>
+            <div ref={(ref) => elementsRef.current[3] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
               <div className={styles.schoolHistory}>
                 <p className={styles.schoolHistoryTitle}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style={{width: "30px", transform: "skewX(10deg)", marginRight: "5px"}}>
