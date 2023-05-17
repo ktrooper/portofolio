@@ -1,124 +1,191 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@font-face {
+  font-family: 'hangthedj';
+  src: url('../public/fonts/HANGTHEDJ.ttf') format('truetype');
+}
 
 .main {
-  justify-content: center;
-  align-items: center;
   background-color: #FEF9F9;
-  background-size: 100%;
-  min-width: none;
+  height:100%;
+  text-align: center;
+  scroll-behavior: smooth;
+
+
   overflow-clip-margin: content-box;
     overflow: clip;
-
+   
+    position: relative;
+    z-index: 1;
   
 }
+.mainvisual{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-.description {
+}
+.imagen {
+  top: 10%;
+  width: 50%;
+  height: auto;
+  max-width: 600px;
+  
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}  
+.center h2{
+}
+
+.cards{
+  margin-top: 40px;
+  padding: 0% 5%;
+}
+.cards p{
+  font-size: 1.2rem;;
+  line-height: 30px;
+  transform: skewX(-10deg);
+  letter-spacing: 3px;
+  display: flex;
+}
+.card1{
+  text-align: left;
+}
+.cardTitle{
+  font-family: "hangthedj";
+  font-size: 3rem;
+}
+
+.card2{
+  text-align: left;
+  margin-top: 80px;
+}
+.card2 a{
+}
+
+
+.sideMenu
+{
+  background-color: transparent;
+}
+
+.sideMenu ul{
+  font-family: 'hangthedj';
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 30%;
+  height:100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+}
+
+.sideMenuList a
+{ 
+ color: rgba(0, 0, 0, 0.93);
+}
+
+.sideMenuItem{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  text-align: center;
-  border: 6px solid rgba(0, 0, 0, 0.734);
-  color: rgba(0, 0, 0, 0.778);
-  top: 0;
-  width: 520px;
-  height: 120px;
-  font-size: 42px;
-  filter: blur(0.4px);
-  align-content: center;
-  margin: 0;
-  text-shadow: -10px -5px 10px rgba(0, 0, 0, 0.419);
-  box-shadow: -10px -6px 10px rgba(0, 0, 0, 0.338);
-  outline: 2px solid rgba(239, 239, 239, 0.038);
-  outline-offset: -2px;
-  transform: translate(250px,-750px);
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.title {
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 20px;
-  margin: -10px;
-  color: rgba(0, 0, 0, 0.816);
-  text-shadow:  -10px -5px 10px rgba(0, 0, 0, 0.419);
-  
-}
-
-
-
-.image {
+.sideMenuItem:after{
+  content: '';
   position: absolute;
-  
-  width: 250px;
-  height: 250px;
-    width: 200px;
-    height: 200px;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.sideMenuItem:hover::after,
+.sideMenuItem:focus::after{
+  opacity: 1;
+}
+
+.sideMenuList li
+{ 
+  text-align: right;
+ margin-top: 5%;
+padding-right:5%;
+
+
+}
+
+.footer{
+  height: 100px;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerItem{
+  fill: black;
+}
+
+.footerItem:hover{
+  fill: #999999;
+}
+
+@media screen and (max-width: 599px) {
+
+  .sideMenuList{
+    font-size: 4vw;
+    margin-top:10%;
+  }
+  .imagen {
+    width:80%;
     
-    filter: drop-shadow(-10px -5px 10px rgba(0, 0, 0, 0.419));
+    overflow: visible;
+    
+  }
+  .center{
+    justify-content: space-around;
+  }
+  .center h2{
+
+    
+    
+    
   
-    padding: 0;
-    margin: 0;
- 
- 
+  }
+  .center p{
+    
+  }
+.footerd {
+  font-size: 4vw;
   
+  }
 }
 
+@media screen and (min-width: 600px) {
 
 
-.image2 {
-
-  max-width: 1050;
-  max-height: 1050;
+  .sideMenuList{
+    font-size: 200%;
+  }
 }
-.center{
-  transform: translate(0px,600px);
-}
-.centerright,
-.centerleft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+.workHistoryTitle {
+  margin-top: 20px;
 }
 
-.card,
-.card2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-  transition: transform 0.3s ease-in-out;
-  margin: 20px;
-  width: 450px;
-  height: 200px;
+.fadeIn {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
-.card:hover,
-.card2:hover {
-  transform: scale(1.05);
-}
-
-.card h2,
-.card2 h2 {
-  font-size: 50px;
-  margin-bottom: 0.7rem;
-  justify-content: space-around;
-  font-style: inherit;
-}
-
-.card p,
-.card2 p {
-  margin: 0;
-  justify-content: space-around;
-  font-size: 20px;
-  line-height: 1.5;
-  max-width: 30ch;
-  font-style: inherit;
+.fadeInVisible{
+  opacity: 1;
 }
