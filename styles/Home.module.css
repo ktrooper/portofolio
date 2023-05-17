@@ -1,8 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
-@import url('https://fonts.gstatic.com');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700');
-
 @font-face {
   font-family: 'hangthedj';
   src: url('../public/fonts/HANGTHEDJ.ttf') format('truetype');
@@ -10,8 +5,7 @@
 
 .main {
   background-color: #FEF9F9;
- height:100%;
- font-family: 'Montserrat', sans-serif;
+  height:100%;
   text-align: center;
   scroll-behavior: smooth;
 
@@ -41,37 +35,33 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
 }  
 .center h2{
 }
 
 .cards{
-  
+  margin-top: 40px;
+  padding: 0% 5%;
+}
+.cards p{
+  font-size: 1.2rem;;
+  line-height: 30px;
+  transform: skewX(-10deg);
+  letter-spacing: 3px;
 }
 .card1{
   text-align: left;
 }
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  transform: translateY(-20px);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cardTitle{
+  font-family: "hangthedj";
+  font-size: 3rem;
 }
 
 .card2{
   text-align: left;
+  margin-top: 80px;
 }
 .card2 a{
 }
@@ -185,4 +175,7 @@ padding-right:5%;
   .sideMenuList{
     font-size: 200%;
   }
+}
+.workHistoryTitle {
+  margin-top: 20px;
 }

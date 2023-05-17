@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 :global(body) {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
   }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,10 +22,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
-   
- 
 }
 	
 
@@ -36,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: "Noto Sans JP";
 }
 ol, ul {
 	list-style: none;
