@@ -67,6 +67,7 @@
 
   text-align: left;
   margin-top: 80px;
+ 
 }
 .awkmiu{
   text-decoration: underline;
@@ -76,10 +77,7 @@
  
 
 }
-.card3 iframe{
- align-items: center;
-  transform:translateX(-40px) ;
-}
+
 .sideMenu
 {
   background-color: transparent;

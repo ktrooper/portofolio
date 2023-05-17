@@ -105,8 +105,8 @@ const  [scrollPosition,setScrollPosition] = useState(0);
            <h2 ref={(ref) => elementsRef.current[4] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="Works">Works</h2>
            <div ref={(ref) => elementsRef.current[5] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
            <iframe 
-  width="800px"
-  height="450px"
+  width="100%"
+  height="400vh"
   src='https://www.youtube.com/embed/nS0wxW9vQsg'
   title="YouTube Video"
   frameBorder="0"
@@ -114,9 +114,9 @@ const  [scrollPosition,setScrollPosition] = useState(0);
   allowFullScreen
 ></iframe>
 
-            <p style={{marginTop: "20px"}}><span className={styles.awkmiu} onClick={() => { window.location.href ='https://www.awkmiu.com/'; }}>Awkmiu</span>というバンドでベーシストとして活動しています。</p>
+            <p style={{marginTop: "20px"}}><span className={styles.awkmiu} onClick={() => { window.location.href ='https://www.awkmiu.com/'; target="_blank"; }}>Awkmiu</span>というバンドでベーシストとして活動しています。</p>
             <p>前身バンドから数えて結成5年目になります。</p>
-            <p style={{marginTop: "10px"}}>YouTubeでカバー動画をあげたり、ライブ、楽曲制作、プロモーションなど精力的に活動しております。
+            <p style={{marginTop: "8px"}}>YouTubeでカバー動画をあげたり、ライブ、楽曲制作、プロモーションなど精力的に活動しております。
             </p>
            </div>
 
@@ -135,7 +135,7 @@ const  [scrollPosition,setScrollPosition] = useState(0);
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("skills")}>Skills</a></li>
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("background")}>Background</a></li>
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("Works")}>Works</a></li>
-          <li className={styles.sideMenuItem}><a onClick={() => handleClick("IMG")}>Go back</a></li>
+          <li className={styles.sideMenuItem}><a onClick={() => handleClick("IMG")}>TOP</a></li>
           </ul>
         </aside>
         <footer className={styles.footer}>
