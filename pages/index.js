@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { Inter } from 'next/font/google'
 import styles from '/styles/Home.module.css'
 
@@ -12,10 +11,47 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
-  const [scrollPosition, setScrollPosition] = useState(0);
 
-  // *asideのリンクがクリックされたときに実行される関数
-  const handleClick = (id) => {
+  const [visibleCards, setVisibleCards] = useState([]);
+
+  useEffect(() => {
+    console.log("=== useeffect ===");
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const cards = document.querySelectorAll('.card1');
+
+      cards.forEach((card) => {
+        const cardTop = card.getBoundingClientRect().top;
+        console.log('windowHeight:', windowHeight);
+        console.log('cardTop:', cardTop);
+
+        if (cardTop < windowHeight) {
+          console.log('cli');
+          setVisibleCards((prevVisibleCards) => [...prevVisibleCards, card]);
+          card.classList.add('card1');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  useEffect(() => {
+    visibleCards.forEach((card) => {
+      card.classList.add('fadeIn');
+    });
+  }, [visibleCards]);
+
+
+
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  function handleClick(id) {
+    console.log('cli');
     const element = document.getElementById(id);
     const position = element.offsetTop - 70;
     setScrollPosition(position);
@@ -23,7 +59,7 @@ export default function Home() {
       top: position,
       behavior: 'smooth'
     });
-  };
+  }
 
 
 
@@ -35,72 +71,71 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
-<div className={styles.mainvisual}id='IMG'>
-<Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
-</div>
+        <div className={styles.mainvisual} id='IMG'>
+          <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
+        </div>
 
- 
+
         <div className={styles.center}>
-          
-          
+
+
           <a className={styles.card1}>
-            <h2 className={inter.className}id="skills"><span className={styles.englishText}>Skills</span></h2>
-            <p className={inter.className}>
-            <span className={styles.englishText}> #HTML<br/>
-              #CSS<br/>
-              #Javascript<br/>
-              #React<br/>
-              #TOEIC</span> 725/990点<br/>
-              <br/>
-              <span className={styles.englishText}>DeepL</span>等の翻訳ソフトを使いながらではありますが、<br/>
+            <h2 className={inter.className} id="skills"><span className={styles.englishText}>Skills</span></h2>
+            <div className={`${styles.cards} ${styles.fadeIn}`}>
+
+
+              <span className={styles.englishText}> #HTML<br />
+                #CSS<br />
+                #Javascript<br />
+                #React<br />
+                #TOEIC</span> 725/990点<br />
+              <br />
+              <span className={styles.englishText}>DeepL</span>等の翻訳ソフトを使いながらではありますが、<br />
               公式ドキュメントを参考に調べながら開発を行うことができます。
-            </p>
+            </div>
+
+
           </a>
 
           <a className={styles.card2}>
-            <h2 className={inter.className}id="background"><span className={styles.englishText}>Background</span></h2>
-            <p className={inter.className}>
-              ・学歴<br/><br/>
-              2018年3月：慶應義塾大学志木高校卒業<br/>
-              2023年3月：慶應義塾大学商学部卒業<br/><br/>
-              ・職歴<br/><br/>
-              2018年12月~現在：株式会社日本入試センター<br/>
-              <span className={styles.englishText}>SAPIXPrivato</span>にて非常勤務講師を担当。<br/>
-              2022年3月~2023年3月：株式会社 <span className={styles.englishText}>DONUTS</span><br/>
-             ミクチャ事業部にて音響業務を担当。<br/><br/>
-             <a className={styles.red}>現在求職中</a>
-             <br/><br/>
-            
-            
-        
+            <h2 className={inter.className} id="background"><span className={styles.englishText}>Background</span></h2>
+            <div className={styles.cards}>
+              ・学歴<br /><br />
+              2018年3月：慶應義塾大学志木高校卒業<br />
+              2023年3月：慶應義塾大学商学部卒業<br /><br />
+              ・職歴<br /><br />
+              2018年12月~現在：株式会社日本入試センター<br />
+              <span className={styles.englishText}>SAPIXPrivato</span>にて非常勤務講師を担当。<br />
+              2022年3月~2023年3月：株式会社 <span className={styles.englishText}>DONUTS</span><br />
+              ミクチャ事業部にて音響業務を担当。<br /><br />
+              <p className={styles.red}>現在求職中</p>
+              <br /><br />
 
-             </p>
+
+
+            </div>
           </a>
 
-        
+
         </div>
         <aside className={styles.sideMenu}>
           <h2 className={styles.sideMenuTitle}></h2>
           <ul className={styles.sideMenuList}>
-            
-            
+
+
             <li><a onClick={() => handleClick("skills")}>Skills</a></li>
-    <li><a onClick={() => handleClick("background")}>Background</a></li>
-    <li><a onClick={() => handleClick("IMG")}>Go back</a></li>
+            <li><a onClick={() => handleClick("background")}>Background</a></li>
+            <li><a onClick={() => handleClick("IMG")}>Go back</a></li>
           </ul>
         </aside>
         <footer className={styles.footer}>
-        <div className={styles.footerd}>Contact DM</div>
-    <div><Link href="https://twitter.com/kaya_awkmiu"><Image className={styles.footern}src= '/logo3.png' alt="pick" loading="lazy" position="relative" width="100" height="100"
-        ></Image></Link></div>
-        
-      </footer>
+          <p className={styles.footerd}>Contact DM</p>
+          <Link href="https://twitter.com/kaya_awkmiu"><Image className={styles.footern} src='/logo3.png' alt="pick" loading="lazy" position="relative" width="100" height="100"
+          ></Image></Link>
+
+        </footer>
       </main>
-      
+
     </>
   )
 }
- /*・音楽経歴<br/><br/>
-             2018年12月~現在： <span className={styles.englishText}>Awkmiu</span>というバンドにてベースを担当。<br/>
-             2021年12月~2022年12月：池袋 <span className={styles.englishText}>Somethin' Jazz Club</span>にて、
-             月1セッションリーダーを行う。<br/> */

@@ -49,16 +49,6 @@
 }
 
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
   
   
@@ -74,7 +64,7 @@
 
 }
 
-.center p{
+.cards{
   font-family:  'Spectral', serif;
   padding-top: 8vw;
   padding-left:10vw;
@@ -89,19 +79,28 @@
   text-align: left;
   height:130vh;
   background-color: rgb(222, 207, 207);
-  
+  opacity:0;
   
 
 }
-.card1:hover p{
-  opacity: 0;
-  transform: translateY(-50px);
-  animation: fadeInUp 0.5s ease-in-out 0.3s forwards;
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-
-
+  transform: translateY(-20px);
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card2{
   padding-top: 7vw;
   text-align: left;
@@ -109,7 +108,7 @@
   background-color: rgb(206, 224, 240);
 
 }
-.card2 p{
+.card2 a{
   font-size: 1.8vw;
 }
 
@@ -151,7 +150,7 @@
 
 }
 
-.sideMenuList a:hover {
+.sideMenuList a:hover{
   color: #2c2b2ba1;
   transition: color 1s ease;
 
@@ -258,4 +257,5 @@ padding-right:5%;
 .japaneseText {
   font-family: 'Noto Sans JP', sans-serif;
 }
+
 
