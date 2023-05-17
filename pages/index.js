@@ -101,6 +101,29 @@ const  [scrollPosition,setScrollPosition] = useState(0);
             </div>
           </a>
 
+          <a className={styles.card3}>
+           <h2 ref={(ref) => elementsRef.current[4] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="Works">Works</h2>
+           <div ref={(ref) => elementsRef.current[5] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
+           <iframe
+  width="800"
+  height="450"
+  src='https://www.youtube.com/embed/nS0wxW9vQsg'
+  title="YouTube Video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+            <p>Awkmiuというバンドでベーシストとして活動しています。<br/>前身バンドから数えて結成5年目になります。</p>
+            <p>YouTubeでカバー動画をあげたり、ライブ、楽曲制作、プロモーションなど精力的に活動しております。
+            </p>
+           </div>
+
+
+
+
+
+          </a>
 
         </div>
         <aside className={styles.sideMenu}>
@@ -110,6 +133,7 @@ const  [scrollPosition,setScrollPosition] = useState(0);
 
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("skills")}>Skills</a></li>
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("background")}>Background</a></li>
+          <li className={styles.sideMenuItem}><a onClick={() => handleClick("Works")}>Works</a></li>
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("IMG")}>Go back</a></li>
           </ul>
         </aside>
