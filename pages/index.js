@@ -75,15 +75,10 @@ export default function Home() {
           <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
         </div>
 
-
         <div className={styles.center}>
-
-
           <a className={styles.card1}>
             <h2 className={inter.className} id="skills"><span className={styles.englishText}>Skills</span></h2>
             <div className={`${styles.cards} ${styles.fadeIn}`}>
-
-
               <span className={styles.englishText}> #HTML<br />
                 #CSS<br />
                 #Javascript<br />
@@ -93,12 +88,10 @@ export default function Home() {
               <span className={styles.englishText}>DeepL</span>等の翻訳ソフトを使いながらではありますが、<br />
               公式ドキュメントを参考に調べながら開発を行うことができます。
             </div>
-
-
           </a>
 
           <a className={styles.card2}>
-            <h2 className={inter.className} id="background"><span className={styles.englishText}>Background</span></h2>
+            <h2 className={styles.hangthedj} id="background"><span className={styles.englishText}>Background</span></h2>
             <div className={styles.cards}>
               ・学歴<br /><br />
               2018年3月：慶應義塾大学志木高校卒業<br />
