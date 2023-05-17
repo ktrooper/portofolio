@@ -50,6 +50,7 @@
   line-height: 30px;
   transform: skewX(-10deg);
   letter-spacing: 3px;
+  display: flex;
 }
 .card1{
   text-align: left;
