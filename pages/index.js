@@ -104,9 +104,9 @@ const  [scrollPosition,setScrollPosition] = useState(0);
           <a className={styles.card3}>
            <h2 ref={(ref) => elementsRef.current[4] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="Works">Works</h2>
            <div ref={(ref) => elementsRef.current[5] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
-           <iframe
-  width="800"
-  height="450"
+           <iframe 
+  width="800px"
+  height="450px"
   src='https://www.youtube.com/embed/nS0wxW9vQsg'
   title="YouTube Video"
   frameBorder="0"
@@ -114,8 +114,9 @@ const  [scrollPosition,setScrollPosition] = useState(0);
   allowFullScreen
 ></iframe>
 
-            <p>Awkmiuというバンドでベーシストとして活動しています。<br/>前身バンドから数えて結成5年目になります。</p>
-            <p>YouTubeでカバー動画をあげたり、ライブ、楽曲制作、プロモーションなど精力的に活動しております。
+            <p style={{marginTop: "20px"}}><span className={styles.awkmiu} onClick={() => { window.location.href ='https://www.awkmiu.com/'; }}>Awkmiu</span>というバンドでベーシストとして活動しています。</p>
+            <p>前身バンドから数えて結成5年目になります。</p>
+            <p style={{marginTop: "10px"}}>YouTubeでカバー動画をあげたり、ライブ、楽曲制作、プロモーションなど精力的に活動しております。
             </p>
            </div>
 
