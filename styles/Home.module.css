@@ -73,8 +73,12 @@
   text-decoration: underline;
 }
 .awkmiu:hover{
-  color:rgb(102, 0, 0);
+  color:rgb(155, 0, 0);
  
+
+}
+.awkmiu:visited{
+  color:inherit;
 
 }
 
