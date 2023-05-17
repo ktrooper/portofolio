@@ -1,12 +1,11 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
-@import url('https://fonts.gstatic.com');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700');
+@font-face {
+  font-family: 'hangthedj';
+  src: url('../public/fonts/HANGTHEDJ.ttf') format('truetype');
+}
 
 .main {
   background-color: #FEF9F9;
- height:100%;
- font-family: 'Montserrat', sans-serif;
+  height:100%;
   text-align: center;
   scroll-behavior: smooth;
 
@@ -33,91 +32,39 @@
   
 }
 .center {
-  
-
     display: flex;
     flex-direction: column;
-
-    top: 0;
-    bottom: 0;
-    margin: auto;
     width: 100%;
-    height: 260vh;
-    
-  
-    
-}
-
-
-
-  
-  
+    max-width: 800px;
+    margin: 0 auto;
+}  
 .center h2{
- 
-  font-family: 'Spectral', serif;
-
-  font-size: 4vw;
-  
-  padding-left:7vw;
-  padding-top: 1.5vw;
-  
-
 }
 
 .cards{
-  font-family:  'Spectral', serif;
-  padding-top: 8vw;
-  padding-left:10vw;
-  padding-right: 5vw;
-  font-weight: lighter;
-  font-size: 2vw;
-  align-items: center;
-  
+  margin-top: 40px;
+  padding: 0% 5%;
+}
+.cards p{
+  font-size: 1.2rem;;
+  line-height: 30px;
+  transform: skewX(-10deg);
+  letter-spacing: 3px;
+  display: flex;
 }
 .card1{
-  padding-top: 7vw;
   text-align: left;
-  height:130vh;
-  background-color: rgb(222, 207, 207);
-  
-  
-
 }
-.fadeIn {
-opacity:0;
-}
-.fadeInVisible {
-  animation-name: fadeIn;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  transform: translateY(-20px);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cardTitle{
+  font-family: "hangthedj";
+  font-size: 3rem;
 }
 
 .card2{
-  padding-top: 7vw;
   text-align: left;
-  height:130vh ;
-  background-color: rgb(206, 224, 240);
-
+  margin-top: 80px;
 }
 .card2 a{
-  font-size: 1.8vw;
-}
-
-.red{
-  color:blue;
-  font-weight: bold;
 }
 
 
@@ -127,53 +74,46 @@ opacity:0;
 }
 
 .sideMenu ul{
-
-  
- 
-  
+  font-family: 'hangthedj';
   position: fixed;
   top: 0px;
   right: 0;
-  width: 50%;
+  width: 30%;
   height:100%;
   padding: 0px;
- 
-  
-  
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
 }
-
-
-
-
 
 .sideMenuList a
 { 
  color: rgba(0, 0, 0, 0.93);
- text-decoration: none;
-
 }
 
-.sideMenuList a:hover{
-  color: #2c2b2ba1;
-  transition: color 1s ease;
+.sideMenuItem{
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
 
+.sideMenuItem:after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: black;
   opacity: 0;
-  
-  animation: slide-in-left 1s forwards;
-  
-}
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
- 
-  }
-  to {
-    opacity: 1;
-    
-  }
-  
+  transition: opacity 300ms;
 }
 
+.sideMenuItem:hover::after,
+.sideMenuItem:focus::after{
+  opacity: 1;
+}
 
 .sideMenuList li
 { 
@@ -185,27 +125,18 @@ padding-right:5%;
 }
 
 .footer{
-  position: fixed;
+  height: 100px;;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+}
 
-  bottom: 0;
-  height: 20vh;
-  width: 100%;
-  z-index: 2;
-  background-color: transparent;
-  padding-bottom: 0%;
-  
+.footerItem{
+  fill: black;
 }
-.footern{
-  width:80%;
-  height:auto;
-}
-.footerd {
-  font-size: 2.4vw;
-  padding-left: 1%;
+
+.footerItem:hover{
+  fill: #999999;
 }
 
 @media screen and (max-width: 599px) {
@@ -221,22 +152,16 @@ padding-right:5%;
     
   }
   .center{
-    
     justify-content: space-around;
   }
   .center h2{
- 
-    
-  
-    font-size: 5vw;
+
     
     
     
   
   }
   .center p{
-    
-    font-size: 3vw;
     
   }
 .footerd {
@@ -252,13 +177,15 @@ padding-right:5%;
     font-size: 200%;
   }
 }
-
-
-.englishText {
-  font-family: 'Montserrat', sans-serif;
-}
-.japaneseText {
-  font-family: 'Noto Sans JP', sans-serif;
+.workHistoryTitle {
+  margin-top: 20px;
 }
 
+.fadeIn {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
 
+.fadeInVisible{
+  opacity: 1;
+}
