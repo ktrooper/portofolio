@@ -1,57 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
 import styles from '/styles/Home.module.css'
-
-
-const inter = Inter({ subsets: ['latin'] })
-
-
 
 export default function Home() {
 
-  const [visibleCards, setVisibleCards] = useState([]);
+  const elementsRef = useRef([]);
 
   useEffect(() => {
-    console.log("=== useeffect ===");
+
     const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const cards = document.querySelectorAll('.card1');
-
-      cards.forEach((card) => {
-        const cardTop = card.getBoundingClientRect().top;
-        console.log('windowHeight:', windowHeight);
-        console.log('cardTop:', cardTop);
-
-        if (cardTop < windowHeight) {
-          console.log('cli');
-          setVisibleCards((prevVisibleCards) => [...prevVisibleCards, card]);
-          card.classList.add('card1');
+      elementsRef.current.forEach((element) => {
+        if(element) {
+          const {top} = element.getBoundingClientRect();
+          const isVisible = top < window.innerHeight - 50;
+          if(isVisible) {
+            element.classList.add(styles.fadeInVisible);
+            
+          }else {
+            element.classList.remove(styles.fadeInVisible);
+          }
+       
         }
-      });
-    };
+      })
+    }
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
-
-  useEffect(() => {
-    visibleCards.forEach((card) => {
-      card.classList.add('fadeIn');
-    });
-  }, [visibleCards]);
-
-
-
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-  function handleClick(id) {
-    console.log('cli');
+    window.addEventListener('scroll', handleScroll)
+  }, []);
+const  [scrollPosition,setScrollPosition] = useState(0);
+ function handleClick(id) {
     const element = document.getElementById(id);
     const position = element.offsetTop - 70;
     setScrollPosition(position);
@@ -60,8 +38,6 @@ export default function Home() {
       behavior: 'smooth'
     });
   }
-
-
 
   return (
     <>
@@ -75,13 +51,12 @@ export default function Home() {
           <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
         </div>
 
-
         <div className={styles.center}>
 
 
           <a className={styles.card1}>
-            <h2 className={inter.className} id="skills"><span className={styles.englishText}>Skills</span></h2>
-            <div className={`${styles.cards} ${styles.fadeIn}`}>
+            <h2 ref={(ref) => elementsRef.current[0] = ref} className={styles.fadeIn} id="skills"><span className={styles.englishText}>Skills</span></h2>
+            <div ref={(ref) => elementsRef.current[1] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
 
 
               <span className={styles.englishText}> #HTML<br />
@@ -98,8 +73,8 @@ export default function Home() {
           </a>
 
           <a className={styles.card2}>
-            <h2 className={inter.className} id="background"><span className={styles.englishText}>Background</span></h2>
-            <div className={styles.cards}>
+            <h2 ref={(ref) => elementsRef.current[2] = ref} className={styles.fadeIn} id="background"><span className={styles.englishText}>Background</span></h2>
+            <div ref={(ref) => elementsRef.current[3] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
               ・学歴<br /><br />
               2018年3月：慶應義塾大学志木高校卒業<br />
               2023年3月：慶應義塾大学商学部卒業<br /><br />
