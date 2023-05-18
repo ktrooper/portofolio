@@ -55,7 +55,7 @@ const  [scrollPosition,setScrollPosition] = useState(0);
 
 
         <div className={styles.center}>
-          <a className={styles.card1}>
+          <div className={styles.card1}>
             <h2 ref={(ref) => elementsRef.current[0] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="skills">Skills</h2>
             <div ref={(ref) => elementsRef.current[1] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
               <p> HTML / CSS / Javascript / React</p>
@@ -63,8 +63,8 @@ const  [scrollPosition,setScrollPosition] = useState(0);
               <p style={{marginTop: "10px"}}>DeepL等の翻訳ソフトを使いながらではありますが、</p>
               <p>公式ドキュメントを参考に調べながら開発を行うことができます。</p>
             </div>
-          </a>
-          <a className={styles.card2}>
+          </div>
+          <div className={styles.card2}>
             <h2 ref={(ref) => elementsRef.current[2] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="background">Background</h2>
             <div ref={(ref) => elementsRef.current[3] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
               <div className={styles.schoolHistory}>
@@ -99,8 +99,32 @@ const  [scrollPosition,setScrollPosition] = useState(0);
                 </div>
               </div>
             </div>
-          </a>
+          </div>
 
+          <div className={styles.card3}>
+           <h2 ref={(ref) => elementsRef.current[4] = ref} className={`${styles.cardTitle} ${styles.fadeIn}`} id="Works">Works</h2>
+           <div ref={(ref) => elementsRef.current[5] = ref} className={`${styles.cards} ${styles.fadeIn}`}>
+           <iframe 
+  width="100%"
+  height="400vh"
+  src='https://www.youtube.com/embed/nS0wxW9vQsg'
+  title="YouTube Video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+            <p style={{marginTop: "20px"}}><a className={styles.awkmiu}href ='https://www.awkmiu.com/'target="_blank">Awkmiu</a>というバンドでベーシストとして活動しています。</p>
+            <p>前身バンドから数えて結成5年目になります。</p>
+            <p style={{marginTop: "8px"}}>YouTubeでカバー動画をあげたり、ライブ、楽曲制作、プロモーションなど精力的に活動しております。
+            </p>
+           </div>
+
+
+
+
+
+          </div>
 
         </div>
         <aside className={styles.sideMenu}>
@@ -110,7 +134,8 @@ const  [scrollPosition,setScrollPosition] = useState(0);
 
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("skills")}>Skills</a></li>
           <li className={styles.sideMenuItem}><a onClick={() => handleClick("background")}>Background</a></li>
-          <li className={styles.sideMenuItem}><a onClick={() => handleClick("IMG")}>Go back</a></li>
+          <li className={styles.sideMenuItem}><a onClick={() => handleClick("Works")}>Works</a></li>
+          <li className={styles.sideMenuItem}><a onClick={() => handleClick("IMG")}>TOP</a></li>
           </ul>
         </aside>
         <footer className={styles.footer}>

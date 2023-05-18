@@ -38,8 +38,7 @@
     max-width: 800px;
     margin: 0 auto;
 }  
-.center h2{
-}
+
 
 .cards{
   margin-top: 40px;
@@ -64,8 +63,24 @@
   text-align: left;
   margin-top: 80px;
 }
+.card3{
 
+  text-align: left;
+  margin-top: 80px;
+ 
+}
+.awkmiu{
+  text-decoration: underline;
+}
+.awkmiu:hover{
+  color:rgb(155, 0, 0);
+ 
 
+}
+.awkmiu:visited{
+  color:inherit;
+
+}
 
 .sideMenu
 {
@@ -138,7 +153,7 @@ padding-right:5%;
   fill: #999999;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
 
   .sideMenuList{
     font-size: 4vw;
@@ -153,23 +168,18 @@ padding-right:5%;
   .center{
     justify-content: space-around;
   }
-  .center h2{
 
-    
-    
-    
-  
-  }
-  .center p{
-    
-  }
 .footerd {
   font-size: 4vw;
   
   }
+  .card3 iframe{
+    width:50vw;
+    height:auto;
+  }
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 
 
   .sideMenuList{
