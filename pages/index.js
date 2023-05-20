@@ -5,6 +5,7 @@ import styles from '/styles/Home.module.css'
 
 export default function Home() {
 
+  const [fallingImageLoaded, setFallingImageLoaded] = useState(false);
   const elementsRef = useRef([]);
 
   useEffect(() => {
@@ -48,7 +49,16 @@ const  [scrollPosition,setScrollPosition] = useState(0);
       </Head>
       <main className={styles.main}>
         <div className={styles.mainvisual} id='IMG'>
-          <Image className={styles.imagen} src='/ab.png' alt="pick" loading="lazy" position="relative" width="2000" height="2000" ></Image>
+        <Image
+  className={`${styles.imagen} ${fallingImageLoaded ? styles.fallingImage : ''}`}
+  src="/ab.png"
+  alt="pick"
+  loading="lazy"
+  position="relative"
+  width={2000}
+  height={2000}
+  onLoad={() => setFallingImageLoaded(true)}
+/>
         </div>
 
        

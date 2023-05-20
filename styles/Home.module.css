@@ -198,3 +198,18 @@ padding-right:5%;
 .fadeInVisible{
   opacity: 1;
 }
+
+@keyframes fallingAnimation {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fallingImage {
+  animation: fallingAnimation 2s ease-in-out;
+}
