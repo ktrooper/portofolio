@@ -48,7 +48,8 @@ const  [scrollPosition,setScrollPosition] = useState(0);
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.mainvisual} id='IMG'>
+      <div className={`${styles.mainvisual} ${styles.imageContainer}`} id="IMG" style={{ overflow: 'hidden' }}>
+  
         <Image
   className={`${styles.imagen} ${fallingImageLoaded ? styles.fallingImage : ''}`}
   src="/ab.png"
@@ -59,6 +60,8 @@ const  [scrollPosition,setScrollPosition] = useState(0);
   height={2000}
   onLoad={() => setFallingImageLoaded(true)}
 />
+<div className={`${styles.imageShadow} ${styles.fadeIn2}`}
+onLoad={() => setFallingImageLoaded(true)}/>
         </div>
 
        
